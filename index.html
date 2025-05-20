@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sherwin Shaji - Portfolio</title>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-black text-gray-900 dark:text-white px-4 py-6 transition-colors duration-300">
+  <div class="max-w-5xl mx-auto">
+    <!-- Dark Mode Toggle -->
+    <div class="flex justify-end mb-4">
+      <button
+        id="theme-toggle"
+        class="bg-gray-200 dark:bg-gray-800 text-black dark:text-white px-4 py-2 rounded-md shadow"
+      >
+        Toggle Dark Mode
+      </button>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="bg-gradient-to-br from-[#39FF14] to-green-600 text-black text-center py-16 rounded-xl mb-8 shadow-lg"
+    >
+      <h1 class="text-4xl font-bold mb-2">Welcome to My Portfolio</h1>
+      <p class="text-lg">
+        Hello, I'm <strong>Sherwin Shaji</strong>. Here's my journey, achievements, and aspirations!
+      </p>
+    </header>
+
+    <!-- Navigation -->
+    <nav
+      class="bg-white dark:bg-gray-900 border border-[#39FF14] rounded-xl mb-8 px-6 py-4 shadow"
+    >
+      <ul class="flex flex-wrap justify-around gap-4 text-[#39FF14] font-semibold">
+        <li><a href="#welcome" class="hover:text-[#2fff00]">Welcome</a></li>
+        <li><a href="#about" class="hover:text-[#2fff00]">About Me</a></li>
+        <li><a href="#achievements" class="hover:text-[#2fff00]">Achievements</a></li>
+        <li><a href="#goals" class="hover:text-[#2fff00]">Future Goals</a></li>
+        <li><a href="#personal" class="hover:text-[#2fff00]">Personal Side</a></li>
+        <li><a href="#testimonials" class="hover:text-[#2fff00]">Testimonials</a></li>
+        <li><a href="#github" class="hover:text-[#2fff00]">GitHub</a></li>
+        <li><a href="#linkedin" class="hover:text-[#2fff00]">LinkedIn</a></li>
+        <li><a href="#best-practices" class="hover:text-[#2fff00]">Best Practices</a></li>
+        <li><a href="#contact" class="hover:text-[#2fff00]">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="welcome" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">Welcome</h2>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-4">
+        <img
+          src="sherwin-photo1.jpg"
+          alt="Photo of Sherwin Shaji"
+          class="w-48 h-48 rounded-full object-cover shadow-lg"
+        />
+        <video controls class="w-full max-w-md rounded-lg shadow-lg">
+          <source src="sherwin-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section id="about" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">About Me</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Name:</strong> Sherwin Shaji</li>
+        <li><strong>Location:</strong> Mumbai, India</li>
+        <li>
+          <strong>Education:</strong> Computer Engineering, St. John College of Engineering and
+          Management
+        </li>
+        <li><strong>Languages Known:</strong> C, Python, SQL</li>
+      </ul>
+    </section>
+
+    <section id="achievements" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">Achievements</h2>
+      <ul id="achievements-list" class="list-disc pl-5 space-y-2"></ul>
+    </section>
+
+    <section id="goals" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">Future Goals</h2>
+      <p>
+        My goal is to become a skilled Data Engineer who builds scalable, efficient, and secure data
+        pipelines that power intelligent decision-making.
+      </p>
+    </section>
+
+    <section id="personal" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">Personal Side</h2>
+
+      <h3 class="font-semibold text-lg mb-2">Hobbies</h3>
+      <ul id="hobbies-list" class="list-disc pl-5 space-y-2"></ul>
+
+      <h3 class="font-semibold text-lg mt-6 mb-2">Favorite Books</h3>
+      <ul id="books-list" class="list-disc pl-5 space-y-2"></ul>
+
+      <p><strong>Role Models:</strong> Steve Jobs, A.P.J. Abdul Kalam</p>
+      <p><strong>Favorite Sites:</strong> GitHub, Notion, Zerodha</p>
+      <p><strong>Volunteering:</strong> NSS events and tech fest organization</p>
+    </section>
+
+    <section id="testimonials" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">Testimonials</h2>
+      <div id="testimonials-container" class="space-y-4"></div>
+    </section>
+
+    <section id="github" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">GitHub Profile</h2>
+      <p>Check out my projects on GitHub:</p>
+      <a href="https://github.com/sherwin47" target="_blank">
+        <button
+          class="bg-[#39FF14] hover:bg-[#2fff00] text-black px-6 py-2 rounded-lg mt-4"
+        >
+          Visit My GitHub &rarr;
+        </button>
+      </a>
+    </section>
+
+    <section id="linkedin" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">LinkedIn Profile</h2>
+      <p>Connect with me on LinkedIn:</p>
+      <a href="https://www.linkedin.com/in/sherwinshaji" target="_blank">
+        <button
+          class="bg-[#39FF14] hover:bg-[#2fff00] text-black px-6 py-2 rounded-lg mt-4"
+        >
+          Visit My LinkedIn &rarr;
+        </button>
+      </a>
+    </section>
+
+    <section id="best-practices" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">Best Practices Followed</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Semantic HTML5 structure</li>
+        <li>Responsive layout</li>
+        <li>Consistent neon green palette</li>
+        <li>Dark/Light mode support</li>
+        <li>Accessible design with alt texts</li>
+        <li>GitHub Pages deployment</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#39FF14] font-bold mb-4">Contact Me</h2>
+
+      <ul class="space-y-3">
+        <li>
+          <strong>Phone:</strong>
+          <a href="tel:+919004266864" class="text-[#39FF14] underline hover:text-[#2fff00]">+91 9004266864</a>
+        </li>
+        <li>
+          <strong>WhatsApp:</strong>
+          <a href="https://wa.me/919004266864" target="_blank" class="text-[#39FF14] underline hover:text-[#2fff00]">
+            Chat with me
+          </a>
+        </li>
+        <li>
+          <strong>Email:</strong>
+          <a href="mailto:sherwinshaji126@gmail.com" class="text-[#39FF14] underline hover:text-[#2fff00]">
+            sherwinshaji126@gmail.com
+          </a>
+        </li>
+        <li>
+          <strong>Location:</strong>
+          <div class="mt-2 rounded overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.9669052375084!2d72.81351212498055!3d19.196647782032993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6a2d0ac1a85%3A0x5343b245f9637af7!2sBAYVIEW%20CHS%20LTD!5e0!3m2!1sen!2sin!4v1747722777358!5m2!1sen!2sin"
+              width="100%"
+              height="250"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </li>
+        <li>
+          <strong>Socials:</strong>
+          <div class="flex gap-4 mt-2">
+            <a href="https://twitter.com/SherwinShaji1" target="_blank" class="hover:text-[#2fff00]">Twitter</a>
+            <a href="https://www.instagram.com/sherwin_85" target="_blank" class="hover:text-[#2fff00]">Instagram</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#39FF14] dark:bg-green-700 text-black text-center py-4 rounded-xl text-sm mt-8">
+      <p>
+        Contact:
+        <a href="mailto:sherwinshaji126@gmail.com" class="underline">sherwinshaji126@gmail.com</a>
+      </p>
+      <p>&copy; 2025 Sherwin Shaji</p>
+    </footer>
+  </div>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      // Save preference in localStorage
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
+  <!-- Fetch and render data.json -->
+  <script>
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        // Achievements
+        const achievementsList = document.getElementById('achievements-list');
+        if (achievementsList && data.achievements) {
+          data.achievements.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.title} (${item.year})`;
+            achievementsList.appendChild(li);
+          });
+        }
+
+        // Hobbies
+        const hobbiesList = document.getElementById('hobbies-list');
+        if (hobbiesList && data.hobbies) {
+          data.hobbies.forEach(hobby => {
+            const li = document.createElement('li');
+            li.textContent = hobby;
+            hobbiesList.appendChild(li);
+          });
+        }
+
+        // Favorite Books
+        const booksList = document.getElementById('books-list');
+        if (booksList && data.favoriteBooks) {
+          data.favoriteBooks.forEach(book => {
+            const li = document.createElement('li');
+            li.textContent = book;
+            booksList.appendChild(li);
+          });
+        }
+
+        // Testimonials
+        const testimonialsContainer = document.getElementById('testimonials-container');
+        if (testimonialsContainer && data.testimonials) {
+          data.testimonials.forEach(testimonial => {
+            const div = document.createElement('div');
+            div.classList.add('p-4', 'bg-gray-100', 'dark:bg-gray-800', 'rounded-lg', 'shadow');
+            div.innerHTML = `
+              <p class="italic">"${testimonial.text}"</p>
+              <p class="mt-2 text-right font-semibold">- ${testimonial.name}</p>
+            `;
+            testimonialsContainer.appendChild(div);
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error loading data.json:', error);
+      });
+  </script>
+</body>
+</html>
